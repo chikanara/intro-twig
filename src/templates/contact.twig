@@ -1,0 +1,12 @@
+{% extends "./layout.twig" %}
+{% import "form.twig" as form %}
+{% block title %}
+<title>Contact</title>
+{% endblock %}
+{% block content %}
+<h1>Welcome to {{current_page}} page</h1>
+<form action="?p=contact">
+{{form.input("name","Your name",person.name,{class:"col-xs"})}}
+{{form.input("email","Your email",person.email,{class:"col-xs",type:"email"})}}
+</form>
+{% endblock %}

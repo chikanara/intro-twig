@@ -1,0 +1,8 @@
+{% macro input(name,label,value=null,options=[]) %}
+    <div class="form-control {{options.class}}">
+        <label for={{name}}>{{label}}</label>
+        {# <input type="{{options.type  ? options.type : 'text'}}" class="form-control" id="{{name}}" name="{{name}}" value="{{value}}"> #}
+        <input type="{{options.type  ? : 'text'}}" class="form-control" id="{{name}}" name="{{name}}" value="{{value}}">
+        {# <input type="{{options.type  | default('text') }}" class="form-control" id="{{name}}" name="{{name}}" value="{{value}}"> #}
+    </div>
+{% endmacro %}

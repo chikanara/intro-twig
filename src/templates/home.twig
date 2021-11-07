@@ -1,0 +1,17 @@
+{# Welcome to {{title}} page !! #}
+{# My name {{person.name}} and I am {{person.age}} #}
+
+
+{% extends "./layout.twig" %}
+{% block title %}
+    <title>Home</title>
+{% endblock %}
+{% block content %}
+<h1>Home page</h1>
+<ul>
+<p>les tutoriels sont </p>
+{% for tutoriel in tutoriels %}
+    <li>{{tutoriel.name}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
